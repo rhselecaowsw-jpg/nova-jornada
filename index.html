@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Faça um diagnóstico profissional gratuito e descubra os próximos passos para melhorar seu currículo, entrevistas e busca por emprego." />
+  <meta property="og:title" content="Nova Jornada — Diagnóstico Profissional Gratuito" />
+  <meta property="og:description" content="Descubra seu próximo passo profissional em menos de 2 minutos." />
+  <meta property="og:type" content="website" />
+  <meta property="og:locale" content="pt_BR" />
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 64 64%27%3E%3Crect width=%2764%27 height=%2764%27 rx=%2716%27 fill=%27%230f766e%27/%3E%3Ctext x=%2732%27 y=%2741%27 text-anchor=%27middle%27 font-family=%27Arial%27 font-size=%2726%27 font-weight=%27700%27 fill=%27white%27%3ENJ%3C/text%3E%3C/svg%3E">
+  <meta name="theme-color" content="#0f766e" />
+  <title>Nova Jornada — Diagnóstico Profissional Gratuito</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <main class="app-shell">
+    <section class="app-card" aria-live="polite">
+      <header class="brand">
+        <div class="brand-mark">NJ</div>
+        <div>
+          <strong>Nova Jornada</strong>
+          <span>Sua jornada profissional começa aqui.</span>
+        </div>
+      </header>
+
+      <div id="progressWrap" class="progress-wrap hidden" aria-hidden="true">
+        <div class="progress-topline">
+          <span id="progressText">Construindo seu perfil profissional...</span>
+          <strong id="progressValue">0%</strong>
+        </div>
+        <div class="progress-track">
+          <div id="progressBar" class="progress-bar"></div>
+        </div>
+      </div>
+
+      <section id="screen-home" class="screen active">
+        <div class="hero-icon">🚀</div>
+        <p class="eyebrow">ORIENTAÇÃO PROFISSIONAL</p>
+        <h1>Sua jornada profissional começa aqui.</h1>
+        <p class="lead">
+          Descubra o melhor caminho para ingressar no mercado de trabalho,
+          evoluir na carreira ou conquistar novas oportunidades.
+        </p>
+        <button class="primary-btn" data-action="start">Iniciar minha jornada</button>
+        <p class="microcopy">Leva menos de 2 minutos.</p>
+      </section>
+
+      <section id="screen-profile" class="screen">
+        <button class="back-btn" data-action="back">← Voltar</button>
+        <p class="eyebrow">ETAPA 1</p>
+        <h2>Em qual momento da sua jornada profissional você está?</h2>
+        <p class="supporting">Escolha a opção que mais representa sua situação atual.</p>
+        <div id="profileOptions" class="options-grid"></div>
+      </section>
+
+      <section id="screen-question" class="screen">
+        <button class="back-btn" data-action="back">← Voltar</button>
+        <p id="questionStep" class="eyebrow">PERGUNTA 1 DE 5</p>
+        <h2 id="questionTitle"></h2>
+        <p id="questionHelp" class="supporting"></p>
+        <div id="questionOptions" class="options-grid"></div>
+      </section>
+
+      <section id="screen-loading" class="screen center-screen">
+        <div class="loader"></div>
+        <p class="eyebrow">ANALISANDO SUAS RESPOSTAS</p>
+        <h2>Preparando seu plano profissional...</h2>
+        <p class="supporting">Estamos identificando o próximo passo mais adequado para você.</p>
+      </section>
+
+      <section id="screen-result" class="screen">
+        <p class="eyebrow">SEU RESULTADO</p>
+        <div class="result-badge" id="resultBadge">Perfil profissional</div>
+        <h2 id="resultTitle"></h2>
+        <p id="resultSummary" class="result-summary"></p>
+
+        <div class="result-block">
+          <h3>O que identificamos</h3>
+          <p id="resultAnalysis"></p>
+        </div>
+
+        <div class="result-block">
+          <h3>Seus próximos passos</h3>
+          <ul id="resultSteps" class="steps-list"></ul>
+        </div>
+
+        <blockquote>
+          Toda grande carreira começa com um primeiro passo. Hoje você descobriu qual é o seu.
+        </blockquote>
+
+        <button class="primary-btn result-cta" data-action="first-step">
+          🚀 Dar meu 1º passo
+        </button>
+
+        <div class="social-growth-card">
+          <strong>Continue evoluindo gratuitamente</strong>
+          <p>Siga a Nova Jornada para receber dicas práticas sobre currículo, entrevistas e oportunidades.</p>
+          <a class="action-btn instagram-btn" id="resultInstagram" target="_blank" rel="noopener noreferrer">📷 Seguir @nova.jornada.oficial</a>
+        </div>
+      </section>
+
+      <section id="screen-support" class="screen">
+        <button class="back-btn" data-action="back-result">← Voltar ao resultado</button>
+        <p class="eyebrow">APOIE ESTE PROJETO</p>
+        <h2>Antes de continuar...</h2>
+        <p class="supporting">
+          Estamos construindo uma plataforma para ajudar pessoas a ingressarem no mercado
+          de trabalho e evoluírem na carreira.
+        </p>
+
+        <div class="partner-box">
+          <span class="partner-label">ESPAÇO PARA ANÚNCIO OU PARCEIRO</span>
+          <div class="partner-placeholder">
+            <strong>Seu parceiro poderá aparecer aqui</strong>
+            <p>Use este espaço para Google AdSense, afiliados ou patrocinadores.</p>
+          </div>
+        </div>
+
+        <p class="support-note">
+          Ao apoiar nossos parceiros, você ajuda a manter esta experiência gratuita.
+        </p>
+
+        <button class="primary-btn" data-action="continue-after-support">Continuar</button>
+      </section>
+
+      <section id="screen-next" class="screen">
+        <button class="back-btn" data-action="back-support">← Voltar</button>
+        <p class="eyebrow">COMECE SUA JORNADA</p>
+        <h2>Como você deseja começar?</h2>
+        <p class="supporting">Escolha o caminho que faz mais sentido para você neste momento.</p>
+
+        <div class="choice-card featured">
+          <div class="choice-icon">🚀</div>
+          <h3>Quero acelerar minha entrada no mercado de trabalho</h3>
+          <p>Conheça nossos produtos e serviços para conquistar sua primeira oportunidade.</p>
+          <a class="action-btn primary" id="nextProdutos">
+            Conhecer nossos produtos
+          </a>
+        </div>
+
+        <div class="choice-card">
+          <div class="choice-icon">📱</div>
+          <h3>Quero aprender gratuitamente</h3>
+          <p>Receba dicas, conteúdos e novidades sobre currículo, entrevistas e mercado de trabalho.</p>
+          <div class="action-stack">
+            <a class="action-btn" id="nextInstagram" target="_blank" rel="noopener noreferrer">
+              Seguir no Instagram
+            </a>
+            <a class="action-btn whatsapp-btn" id="nextWhatsapp" target="_blank" rel="noopener noreferrer">
+              💬 Falar com a Nova Jornada no WhatsApp
+            </a>
+          </div>
+        </div>
+
+        <p class="closing-message">
+          Seu crescimento profissional é uma jornada. Estaremos ao seu lado em cada passo.
+        </p>
+
+        <button class="secondary-btn" data-action="restart">Refazer diagnóstico</button>
+      </section>
+    </section>
+
+    <footer>
+      <span>© <span id="year"></span> Nova Jornada</span>
+      <span>Seu próximo passo começa agora.</span>
+    </footer>
+  </main>
+
+  <a class="floating-whatsapp" id="floatingWhatsapp" target="_blank" rel="noopener noreferrer" aria-label="Falar com a Nova Jornada no WhatsApp">💬</a>
+  <script src="script.js"></script>
+</body>
+</html>
