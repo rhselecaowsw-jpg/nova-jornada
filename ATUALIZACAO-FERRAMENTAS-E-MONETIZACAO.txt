@@ -1,0 +1,9 @@
+NOVA JORNADA PREMIUM — ATUALIZAÇÃO UNIFICADA
+
+1. O Criador de Currículo completo da versão anterior foi integrado à Central Premium.
+2. Foram mantidas as ferramentas atuais: textos, candidatura, entrevista, plano de 7 dias, salário, férias, rescisão, aviso prévio e checklists.
+3. O currículo inclui foto opcional, experiências, formações, cursos, seis modelos, salvamento local e impressão/PDF.
+4. Foram adicionados três espaços de publicidade/parceiros.
+5. O arquivo assets/ads.js já está preparado para receber o Client ID e os Slot IDs do Google AdSense após aprovação.
+6. Sem IDs do AdSense, os espaços aparecem apenas como áreas reservadas e não carregam anúncios externos.
+7. O link permanece público para quem o receber. O Hotmart Club continua sendo o canal oficial de entrega.
