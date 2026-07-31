@@ -1,0 +1,11 @@
+ENTREGA HOTMART — NOVA JORNADA PREMIUM
+
+1. Publique este projeto atualizado no GitHub/Netlify.
+2. No Hotmart Club, crie uma aula chamada "Acesse sua Central Premium".
+3. Coloque nela este endereço:
+
+https://gentle-druid-7bd051.netlify.app/painel-cliente-8222982-nj7f4k9.html
+
+4. O endereço antigo /central-premium.html foi bloqueado e redireciona para /premium.html.
+5. Esta solução dificulta descoberta e indexação, mas não é autenticação individual. Quem copiar o link poderá compartilhá-lo.
+6. Proteção individual real exige integração da compra da Hotmart com autenticação própria, o que deve ser feito em uma etapa posterior.
