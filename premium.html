@@ -2,146 +2,22 @@
 <html lang="pt-BR">
 <head>
 <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Área Premium — Nova Jornada</title><meta name="description" content="Ferramentas premium da Nova Jornada para currículo, candidatura e entrevistas."><link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 64 64%27%3E%3Crect width=%2764%27 height=%2764%27 rx=%2716%27 fill=%27%230f766e%27/%3E%3Ctext x=%2732%27 y=%2741%27 text-anchor=%27middle%27 font-family=%27Arial%27 font-size=%2726%27 font-weight=%27700%27 fill=%27white%27%3ENJ%3C/text%3E%3C/svg%3E"><link rel="stylesheet" href="assets/style.css">
+<title>Acesso Premium — Nova Jornada</title>
+<meta name="description" content="Acesse com segurança a área Premium da Nova Jornada pela Hotmart.">
+<link rel="stylesheet" href="assets/style.css">
 </head>
 <body>
-<header class="topbar"><div class="wrap nav"><a class="brand" href="index.html">Nova Jornada</a><div class="navlinks"><button id="logout" class="btn btn-outline">Sair</button></div></div></header>
-
-<div id="locked" class="lock panel hidden">
-<h2>Acesso ainda não liberado</h2><p>Após a confirmação do pagamento, o cliente será direcionado para esta área.</p>
-<div class="notice">Na demonstração, volte e clique em “Simular pagamento aprovado”.</div>
-<div class="actions" style="justify-content:center"><a class="btn btn-primary" href="oferta.html#plano">Voltar</a></div>
+<header class="topbar"><div class="wrap nav"><a class="brand" href="index.html">Nova Jornada</a><nav class="navlinks"><a href="index.html">Diagnóstico</a><a href="oferta.html">Plano Premium</a></nav></div></header>
+<section class="section"><div class="wrap"><div class="panel" style="max-width:760px;margin:40px auto;text-align:center">
+<span class="badge">Acesso protegido</span>
+<h1>Área Premium Nova Jornada</h1>
+<p class="lead">O conteúdo Premium não é liberado diretamente por esta página. O acesso é confirmado e gerenciado com segurança pela Hotmart.</p>
+<div class="success"><strong>Já comprou?</strong> Entre na sua conta Hotmart usando o mesmo e-mail informado na compra.</div>
+<div class="actions" style="justify-content:center;margin-top:22px">
+<a class="btn btn-primary" href="https://hotmart.com/PT_BR/club/wildson-da-silva-santana/products/8222982" target="_blank" rel="noopener noreferrer">Acessar pela Hotmart</a>
+<a class="btn btn-outline" href="https://pay.hotmart.com/Y106953782D" target="_blank" rel="noopener noreferrer">Comprar acesso</a>
 </div>
-
-<div id="app" class="app-shell hidden">
-<aside class="sidebar"><h3>Suas ferramentas</h3><div class="menu">
-<button class="active" data-tool="dashboard">🏠 Início</button>
-<button data-tool="curriculo">📄 Currículo profissional</button>
-<button data-tool="textos">🎯 Objetivo e resumo</button>
-<button data-tool="candidatura">✉️ Carta e mensagens</button>
-<button data-tool="entrevista">🎤 Entrevista</button>
-<button data-tool="plano">🚀 Plano de 7 dias</button>
-</div><div class="sidebar-social"><p>Precisa de ajuda?</p><a href="https://wa.me/5581996867010?text=Ol%C3%A1%2C%20preciso%20de%20ajuda%20na%20%C3%A1rea%20Premium%20da%20Nova%20Jornada." target="_blank" rel="noopener noreferrer">💬 WhatsApp</a><a href="https://www.instagram.com/nova.jornada.oficial/" target="_blank" rel="noopener noreferrer">📷 Instagram</a></div></aside>
-
-<main class="main">
-<section id="dashboard" class="tool active">
-<div class="panel"><span class="badge">Área Premium</span><h2>Bem-vindo ao Nova Jornada</h2><p id="premiumWelcome">Comece pelo currículo e depois prepare sua candidatura e entrevista.</p></div>
-<div class="grid"><div class="card"><h3>1. Currículo</h3><p>Preenchimento completo e guiado.</p></div><div class="card"><h3>2. Candidatura</h3><p>Textos personalizados.</p></div><div class="card"><h3>3. Entrevista</h3><p>Treino antes do processo.</p></div></div>
-</section>
-
-<section id="curriculo" class="tool">
-<div class="panel">
-<h2>Criador de currículo profissional</h2>
-<p class="lead">Preencha por etapas. Seus dados podem ser salvos neste navegador.</p>
-<div class="progress" id="progress">
-<span class="active">1. Dados</span><span>2. Objetivo</span><span>3. Experiências</span><span>4. Formação</span><span>5. Cursos</span><span>6. Modelo</span>
-</div>
-
-<div class="step active" data-step="0">
-<div class="form-grid">
-<div class="field"><label>Nome completo</label><div class="help">Use o nome que você utiliza profissionalmente.</div><input id="cvNome" placeholder="Ex.: Maria da Silva"></div>
-<div class="field"><label>Telefone</label><div class="help">Informe um número que você atende e mantenha o WhatsApp organizado.</div><input id="cvTelefone" placeholder="(81) 99999-9999"></div>
-<div class="field"><label>E-mail</label><div class="help">Prefira um e-mail com seu nome, sem apelidos.</div><input id="cvEmail" placeholder="maria.silva@email.com"></div>
-<div class="field"><label>Cidade/UF</label><div class="help">Não é necessário informar endereço completo.</div><input id="cvCidade" placeholder="Recife/PE"></div>
-<div class="field"><label>LinkedIn (opcional)</label><div class="help">Inclua apenas se o perfil estiver atualizado.</div><input id="cvLinkedin" placeholder="linkedin.com/in/seunome"></div>
-<div class="field"><label>Foto (opcional)</label><div class="help">Use somente em modelos com foto. Prefira fundo neutro e boa iluminação.</div><input type="file" id="cvFoto" accept="image/*"></div>
-<div class="field full">
-<div class="photo-box"><div class="photo-preview" id="photoPreview">Sem foto</div><button class="btn btn-danger btn-small" id="removePhoto" type="button">Remover foto</button></div>
-</div>
-</div>
-</div>
-
-<div class="step" data-step="1">
-<div class="form-grid">
-<div class="field full"><label>Objetivo profissional</label><div class="help">Informe o cargo ou área desejada. Evite “qualquer oportunidade”.</div><div class="example">Exemplo: Busco oportunidade como auxiliar administrativo, contribuindo com organização e atendimento.</div><textarea id="cvObjetivo" maxlength="260"></textarea><div class="char-count"><span data-count="cvObjetivo">0</span>/260</div></div>
-<div class="field full"><label>Resumo profissional</label><div class="help">Escreva de 3 a 5 linhas sobre experiência, qualidades, conhecimentos e objetivo.</div><div class="example">Exemplo: Profissional responsável e organizado, com experiência em atendimento e facilidade para aprender.</div><textarea id="cvResumo" maxlength="600"></textarea><div class="char-count"><span data-count="cvResumo">0</span>/600</div></div>
-<div class="field full"><label>Habilidades</label><div class="help">Separe por vírgulas. Escolha habilidades verdadeiras e relacionadas à vaga.</div><input id="cvHabilidades" placeholder="Organização, atendimento, informática, trabalho em equipe"></div>
-</div>
-<div class="actions"><button class="btn btn-light" id="suggestObjective" type="button">Gerar sugestão de objetivo</button><button class="btn btn-light" id="suggestSummary" type="button">Gerar sugestão de resumo</button></div>
-</div>
-
-<div class="step" data-step="2">
-<h3>Experiências profissionais</h3><p class="help">Inclua trabalho formal, informal, autônomo, voluntariado ou ajuda em negócio familiar. Quem busca o primeiro emprego pode usar projetos e atividades relevantes.</p>
-<div id="experiences" class="dynamic-list"></div>
-<div class="actions"><button class="btn btn-light" id="addExperience" type="button">+ Adicionar experiência</button></div>
-</div>
-
-<div class="step" data-step="3">
-<h3>Formação acadêmica</h3><p class="help">Adicione escolaridade, curso técnico, graduação ou formação em andamento.</p>
-<div id="education" class="dynamic-list"></div>
-<div class="actions"><button class="btn btn-light" id="addEducation" type="button">+ Adicionar formação</button></div>
-</div>
-
-<div class="step" data-step="4">
-<h3>Cursos e certificações</h3><p class="help">Priorize cursos relacionados à área desejada.</p>
-<div id="courses" class="dynamic-list"></div>
-<div class="actions"><button class="btn btn-light" id="addCourse" type="button">+ Adicionar curso</button></div>
-<div class="form-grid" style="margin-top:18px">
-<div class="field full"><label>Idiomas (opcional)</label><div class="help">Informe o idioma e o nível real.</div><input id="cvIdiomas" placeholder="Inglês básico; Espanhol intermediário"></div>
-<div class="field full"><label>Informações adicionais</label><div class="help">Ex.: disponibilidade, CNH, veículo próprio ou conhecimento específico.</div><textarea id="cvAdicionais"></textarea></div>
-</div>
-</div>
-
-<div class="step" data-step="5">
-<h3>Escolha o modelo</h3>
-<div class="template-picker">
-<div class="template-option selected" data-template="moderno">Moderno</div>
-<div class="template-option" data-template="classico">Clássico</div>
-<div class="template-option" data-template="minimalista">Minimalista</div>
-<div class="template-option" data-template="ats">ATS</div>
-<div class="template-option" data-template="executivo">Executivo</div>
-<div class="template-option" data-template="operacional">Operacional</div>
-</div>
-<div class="notice" style="margin-top:14px"><strong>Dica:</strong> para candidaturas em grandes empresas e sistemas automáticos, escolha o modelo ATS e evite foto.</div>
-<div class="actions"><button class="btn btn-primary" id="generateCv" type="button">Gerar currículo</button><button class="btn btn-outline" id="printCv" type="button">Baixar/Imprimir PDF</button><button class="btn btn-light" id="saveCv" type="button">Salvar dados</button></div>
-</div>
-
-<div class="actions">
-<button class="btn btn-outline" id="prevStep" type="button">← Voltar</button>
-<button class="btn btn-primary" id="nextStep" type="button">Continuar →</button>
-</div>
-</div>
-
-<div id="cvPreview" class="cv-preview moderno">
-<h1>SEU NOME</h1><div class="cv-meta">Telefone | E-mail | Cidade/UF</div><h2>Objetivo profissional</h2><p>Preencha as etapas e clique em gerar currículo.</p>
-</div>
-</section>
-
-<section id="textos" class="tool"><div class="panel">
-<h2>Gerador de objetivo e resumo profissional</h2>
-<div class="form-grid">
-<div class="field"><label>Área ou cargo</label><input id="txCargo"></div>
-<div class="field"><label>Nível de experiência</label><select id="txNivel"><option>Primeiro emprego</option><option>Até 2 anos</option><option>Mais de 2 anos</option><option>Mudança de carreira</option></select></div>
-<div class="field full"><label>Qualidades</label><input id="txQualidades"></div>
-<div class="field full"><label>Conhecimentos ou cursos</label><input id="txConhecimentos"></div>
-</div><div class="actions"><button class="btn btn-primary" id="genTextos">Gerar textos</button></div>
-<h3>Objetivo</h3><div id="resObjetivo" class="result"></div><h3 style="margin-top:16px">Resumo</h3><div id="resResumo" class="result"></div>
-</div></section>
-
-<section id="candidatura" class="tool"><div class="panel">
-<h2>Carta e mensagens</h2>
-<div class="form-grid">
-<div class="field"><label>Seu nome</label><input id="caNome"></div><div class="field"><label>Empresa</label><input id="caEmpresa"></div>
-<div class="field"><label>Vaga</label><input id="caVaga"></div><div class="field"><label>Situação</label><select id="caSituacao"><option>Primeiro emprego</option><option>Com experiência</option><option>Mudança de carreira</option></select></div>
-<div class="field full"><label>Qualidades ou experiência</label><input id="caQualidades"></div></div>
-<div class="actions"><button class="btn btn-primary" id="genCandidatura">Gerar candidatura</button></div>
-<h3>Carta</h3><div id="resCarta" class="result"></div><h3 style="margin-top:16px">WhatsApp</h3><div id="resWhatsapp" class="result"></div><h3 style="margin-top:16px">E-mail</h3><div id="resEmail" class="result"></div>
-</div></section>
-
-<section id="entrevista" class="tool"><div class="panel">
-<h2>Simulador de entrevista</h2><div class="form-grid"><div class="field"><label>Vaga</label><input id="intVaga"></div><div class="field"><label>Nível</label><select id="intNivel"><option>Primeiro emprego</option><option>Com experiência</option></select></div></div>
-<div class="actions"><button class="btn btn-primary" id="startInterview">Iniciar</button></div><div id="questions"></div>
-<div id="scoreBox" class="panel hidden"><div class="score" id="score">0/100</div><p id="feedback"></p></div>
-</div></section>
-
-<section id="plano" class="tool"><div class="panel">
-<h2>Plano personalizado de 7 dias</h2><div class="form-grid">
-<div class="field"><label>Cargo ou área</label><input id="plCargo"></div><div class="field"><label>Tempo por dia</label><select id="plHoras"><option>1 hora</option><option>2 horas</option><option>3 horas ou mais</option></select></div>
-<div class="field full"><label>Maior dificuldade</label><select id="plDificuldade"><option>Não tenho currículo</option><option>Não encontro vagas</option><option>Tenho medo de entrevista</option><option>Envio currículos e não recebo resposta</option></select></div></div>
-<div class="actions"><button class="btn btn-primary" id="genPlano">Criar plano</button></div><div id="resPlano" class="result"></div>
-</div></section>
-</main></div>
-
-<a class="floating-whatsapp" href="https://wa.me/5581996867010?text=Ol%C3%A1%2C%20preciso%20de%20ajuda%20na%20Nova%20Jornada." target="_blank" rel="noopener noreferrer" aria-label="Falar no WhatsApp">💬</a>
-<script src="assets/app.js"></script>
+<p class="small" style="margin-top:22px">Em caso de dúvida, confira também o e-mail de confirmação enviado pela Hotmart.</p>
+</div></div></section>
+<footer>Nova Jornada — Sua jornada profissional começa aqui.</footer>
 </body></html>

@@ -102,26 +102,60 @@
 
       <section id="screen-support" class="screen">
         <button class="back-btn" data-action="back-result">← Voltar ao resultado</button>
-        <p class="eyebrow">APOIE ESTE PROJETO</p>
-        <h2>Antes de continuar...</h2>
+        <p class="eyebrow">SEU PLANO GRATUITO</p>
+        <h2>Receba seus próximos passos por e-mail</h2>
         <p class="supporting">
-          Estamos construindo uma plataforma para ajudar pessoas a ingressarem no mercado
-          de trabalho e evoluírem na carreira.
+          Informe seus dados para entrar no funil gratuito da Nova Jornada e receber
+          orientações práticas de currículo, entrevistas e busca por oportunidades.
         </p>
 
-        <div class="partner-box">
-          <span class="partner-label">ESPAÇO PARA ANÚNCIO OU PARCEIRO</span>
-          <div class="partner-placeholder">
-            <strong>Seu parceiro poderá aparecer aqui</strong>
-            <p>Use este espaço para Google AdSense, afiliados ou patrocinadores.</p>
+        <div class="lead-plan-preview">
+          <span class="lead-plan-icon">🎁</span>
+          <div>
+            <strong id="leadPlanTitle">Plano de Ação Nova Jornada</strong>
+            <p id="leadPlanSummary">Um roteiro personalizado de acordo com o seu diagnóstico.</p>
           </div>
         </div>
 
-        <p class="support-note">
-          Ao apoiar nossos parceiros, você ajuda a manter esta experiência gratuita.
-        </p>
+        <form id="leadCaptureForm" class="lead-form" novalidate>
+          <div class="lead-field">
+            <label for="leadName">Nome</label>
+            <input id="leadName" name="FIRSTNAME" type="text" autocomplete="given-name" maxlength="80" placeholder="Ex.: Maria" required />
+          </div>
 
-        <button class="primary-btn" data-action="continue-after-support">Continuar</button>
+          <div class="lead-field">
+            <label for="leadEmail">Seu melhor e-mail</label>
+            <input id="leadEmail" name="EMAIL" type="email" autocomplete="email" maxlength="160" placeholder="voce@email.com" required />
+          </div>
+
+          <input id="leadProfile" name="PERFIL" type="hidden" />
+          <input id="leadDifficulty" name="DIFICULDADE" type="hidden" />
+          <input id="leadSource" name="ORIGEM" type="hidden" value="Diagnóstico Nova Jornada" />
+
+          <label class="consent-check">
+            <input id="leadConsent" type="checkbox" required />
+            <span>Concordo em receber conteúdos e ofertas da Nova Jornada por e-mail. Posso cancelar quando quiser.</span>
+          </label>
+
+          <p id="leadFormError" class="form-message error hidden" role="alert"></p>
+          <button id="leadSubmitButton" class="primary-btn" type="submit">📩 Receber meu plano personalizado</button>
+          <p class="privacy-note">Seus dados serão usados apenas pela Nova Jornada. Não enviamos spam.</p>
+        </form>
+
+        <div id="leadFallback" class="lead-fallback hidden">
+          <a id="brevoHostedLink" class="secondary-btn hidden" target="_blank" rel="noopener noreferrer">Abrir formulário seguro do Brevo</a>
+          <a class="primary-btn" href="meu-plano.html">Ver meu plano personalizado agora</a>
+        </div>
+
+        <div id="leadSuccess" class="lead-success hidden" aria-live="polite">
+          <span>✅</span>
+          <div>
+            <strong>Cadastro realizado!</strong>
+            <p>Confira sua caixa de entrada e também a pasta de spam. Agora você pode conhecer as ferramentas recomendadas para acelerar sua jornada.</p>
+          </div>
+        </div>
+
+        <button class="text-btn" type="button" data-action="skip-lead">Continuar sem receber o plano por e-mail</button>
       </section>
 
       <section id="screen-next" class="screen">

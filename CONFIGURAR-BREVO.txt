@@ -1,0 +1,58 @@
+NOVA JORNADA — CONFIGURAÇÃO DO FUNIL AUTOMÁTICO DE E-MAIL
+
+O site já contém:
+- formulário de nome e e-mail após o diagnóstico;
+- consentimento para recebimento de mensagens;
+- envio preparado para formulário externo do Brevo;
+- perfil e dificuldade do diagnóstico enviados como campos ocultos;
+- tela de confirmação e continuação automática para a oferta;
+- validação de nome e e-mail;
+- nenhum segredo ou chave de API exposto no navegador.
+
+O QUE AINDA DEPENDE DA CONTA BREVO
+
+1. Criar no Brevo a lista: Diagnóstico Nova Jornada.
+2. Criar os atributos de contato personalizados:
+   PERFIL
+   DIFICULDADE
+   ORIGEM
+3. Criar um formulário de inscrição com os campos:
+   FIRSTNAME
+   EMAIL
+   PERFIL
+   DIFICULDADE
+   ORIGEM
+4. Copiar a URL de processamento/action fornecida pelo Brevo.
+5. Abrir script.js e localizar:
+
+   brevoFormEndpoint: ""
+
+6. Colar a URL entre as aspas, por exemplo:
+
+   brevoFormEndpoint: "URL_FORNECIDA_PELO_BREVO"
+
+IMPORTANTE
+- Não cole chave de API no JavaScript do site.
+- O envio real e a sequência automática só começam depois que a URL do formulário Brevo for inserida.
+- Faça um cadastro de teste antes de publicar.
+
+SEQUÊNCIA RECOMENDADA NO BREVO
+
+E-mail 1 — imediatamente
+Assunto: Seu Plano de Ação Nova Jornada
+Conteúdo: agradecimento, próximos passos e link para a oferta.
+
+E-mail 2 — 1 dia depois
+Assunto: O primeiro ajuste que pode fortalecer seu currículo
+
+E-mail 3 — 3 dias depois
+Assunto: Como se preparar melhor para uma entrevista
+
+E-mail 4 — 5 dias depois
+Assunto: Conheça as ferramentas da Nova Jornada Premium
+Link: https://pay.hotmart.com/Y106953782D
+
+E-mail 5 — 7 dias depois
+Assunto: Continue sua evolução profissional
+
+DATA DA ALTERAÇÃO: 30/07/2026

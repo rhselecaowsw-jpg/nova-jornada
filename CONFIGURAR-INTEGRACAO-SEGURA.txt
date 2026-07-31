@@ -1,0 +1,26 @@
+NOVA JORNADA — INTEGRAÇÃO SEGURA COM BREVO
+
+O site está pronto para enviar nome, e-mail, perfil e dificuldade a um endpoint seguro.
+A chave do Brevo NÃO deve ser colocada no GitHub Pages ou no arquivo script.js.
+
+OPÇÃO MAIS SIMPLES: NETLIFY
+1. Publique a pasta inteira no Netlify.
+2. Em Site configuration > Environment variables, crie:
+   BREVO_API_KEY = sua chave secreta
+   BREVO_LIST_ID = número da lista Diagnóstico Nova Jornada
+   ALLOWED_ORIGIN = endereço público do site
+3. O endpoint será: https://SEU-SITE.netlify.app/.netlify/functions/lead
+4. Cole esse endereço em CONFIG.leadEndpoint, no início de script.js.
+
+ALTERNATIVA: CLOUDFLARE WORKERS
+Use cloudflare/worker.js e cadastre os mesmos segredos no painel do Worker.
+Depois cole a URL do Worker em CONFIG.leadEndpoint.
+
+PLANO B
+É possível colocar o link público criado em Formulários > Compartilhar no campo
+CONFIG.brevoHostedFormUrl. Ele será exibido somente quando o endpoint seguro ainda não estiver ativo.
+
+IMPORTANTE
+- Não publique BREVO_API_KEY em nenhum arquivo.
+- Antes de ativar a automação, faça um cadastro com seu próprio e-mail.
+- Confirme se o contato entrou na lista correta e se o e-mail chegou.

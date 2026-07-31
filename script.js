@@ -2,7 +2,14 @@ const CONFIG = {
   // Troque pelos seus links reais antes de publicar.
   instagram: "https://www.instagram.com/nova.jornada.oficial/",
   whatsapp: "https://wa.me/5581996867010?text=Ol%C3%A1%2C%20vim%20pela%20plataforma%20Nova%20Jornada%20e%20gostaria%20de%20mais%20informa%C3%A7%C3%B5es.",
-  produtoPago: "oferta.html"
+  produtoPago: "meu-plano.html",
+
+  // Endpoint seguro publicado em Netlify/Vercel/Cloudflare.
+  // Nunca coloque uma chave de API secreta neste arquivo.
+  leadEndpoint: "/.netlify/functions/lead",
+
+  // Opcional: link público do formulário Brevo para uso como plano B.
+  brevoHostedFormUrl: ""
 };
 
 const profiles = [
@@ -75,6 +82,114 @@ const questions = [
 ];
 
 const state={profile:null,answers:{},questionIndex:0};
+
+
+const recommendationCatalog = {
+  curriculo: {
+    icon:"📄", tag:"Apresentação profissional", title:"Currículo que gera entrevistas",
+    description:"Aprenda a apresentar experiências, competências e resultados com clareza para aumentar suas chances de seleção."
+  },
+  entrevista: {
+    icon:"🎤", tag:"Processo seletivo", title:"Entrevistas com mais confiança",
+    description:"Treine respostas, postura e exemplos profissionais para se comunicar melhor diante dos recrutadores."
+  },
+  excel: {
+    icon:"📊", tag:"Competência prática", title:"Excel para o mercado de trabalho",
+    description:"Desenvolva uma habilidade valorizada em vagas administrativas, comerciais, financeiras e operacionais."
+  },
+  linkedin: {
+    icon:"💼", tag:"Visibilidade profissional", title:"LinkedIn profissional",
+    description:"Organize seu perfil, amplie sua rede e melhore sua presença para ser encontrado por empresas e recrutadores."
+  },
+  comunicacao: {
+    icon:"💬", tag:"Habilidade comportamental", title:"Comunicação e oratória",
+    description:"Expresse suas ideias com clareza em entrevistas, reuniões, atendimento e situações profissionais."
+  },
+  qualificacao: {
+    icon:"🎓", tag:"Desenvolvimento", title:"Qualificação direcionada",
+    description:"Identifique as competências mais exigidas na área desejada e estude com foco no que realmente pode gerar oportunidades."
+  },
+  carreira: {
+    icon:"🧭", tag:"Planejamento", title:"Direcionamento de carreira",
+    description:"Organize objetivos, possibilidades e ações para tomar decisões profissionais com mais segurança."
+  },
+  ia: {
+    icon:"🤖", tag:"Produtividade", title:"Inteligência Artificial no trabalho",
+    description:"Use IA com responsabilidade para pesquisar vagas, revisar textos e aumentar sua produtividade profissional."
+  },
+  powerbi: {
+    icon:"📈", tag:"Análise de dados", title:"Power BI e indicadores",
+    description:"Transforme dados em informações úteis e fortaleça seu perfil para funções administrativas e analíticas."
+  }
+};
+
+function getRecommendations(){
+  const scores={curriculo:0,entrevista:0,excel:0,linkedin:0,comunicacao:0,qualificacao:0,carreira:0,ia:0,powerbi:0};
+  const difficulty=state.answers.dificuldade;
+  const situation=state.answers.situacao;
+  const objective=state.answers.objetivo;
+
+  if(state.profile==="primeiro_emprego" || objective==="primeiro" || situation==="nunca_trabalhei"){
+    scores.curriculo+=6;scores.entrevista+=5;scores.linkedin+=4;scores.excel+=3;
+  }
+  if(state.profile==="emprego_melhor" || objective==="melhor" || situation==="desempregado"){
+    scores.curriculo+=5;scores.linkedin+=4;scores.entrevista+=4;scores.excel+=3;
+  }
+  if(state.profile==="mudar_profissao" || objective==="mudar" || situation==="empregado_mudar"){
+    scores.carreira+=6;scores.qualificacao+=5;scores.linkedin+=4;scores.ia+=2;
+  }
+  if(state.profile==="crescer_carreira" || objective==="crescer" || situation==="empregado_crescer"){
+    scores.qualificacao+=5;scores.comunicacao+=4;scores.powerbi+=3;scores.ia+=3;
+  }
+  if(state.profile==="indeciso" || objective==="descobrir" || difficulty==="direcao"){
+    scores.carreira+=7;scores.qualificacao+=4;scores.linkedin+=2;
+  }
+
+  if(difficulty==="curriculo") scores.curriculo+=9;
+  if(difficulty==="entrevista") {scores.entrevista+=9;scores.comunicacao+=5;}
+  if(difficulty==="qualificacao") {scores.qualificacao+=8;scores.excel+=4;scores.ia+=3;}
+  if(difficulty==="experiencia") {scores.curriculo+=4;scores.linkedin+=4;scores.excel+=3;}
+  if(state.answers.prazo==="urgente") {scores.curriculo+=2;scores.entrevista+=2;scores.linkedin+=2;}
+  if(state.answers.tempo==="menos_2") {scores.ia+=2;scores.carreira+=1;}
+  if(state.answers.tempo==="mais_10") {scores.qualificacao+=2;scores.excel+=2;scores.powerbi+=2;}
+
+  return Object.entries(scores)
+    .sort((a,b)=>b[1]-a[1])
+    .slice(0,3)
+    .map(([key])=>({key,...recommendationCatalog[key]}));
+}
+
+function renderRecommendations(){
+  const grid=document.getElementById("recommendationsGrid");
+  const summary=document.getElementById("recommendationSummary");
+  if(!grid || !summary) return;
+
+  const items=getRecommendations();
+  const difficultyLabels={
+    experiencia:"ganhar experiência e apresentar melhor seu potencial",
+    curriculo:"melhorar sua apresentação profissional",
+    direcao:"definir uma direção profissional mais clara",
+    qualificacao:"desenvolver competências valorizadas pelo mercado",
+    entrevista:"aumentar sua confiança nos processos seletivos",
+    outro:"fortalecer sua preparação profissional"
+  };
+  summary.textContent=`Seu diagnóstico indica que a prioridade agora é ${difficultyLabels[state.answers.dificuldade] || "fortalecer sua preparação profissional"}. Estas recomendações foram selecionadas para esse objetivo.`;
+
+  grid.innerHTML="";
+  items.forEach(item=>{
+    const article=document.createElement("article");
+    article.className="recommendation-card";
+    article.innerHTML=`
+      <div class="recommendation-icon" aria-hidden="true">${item.icon}</div>
+      <div class="recommendation-content">
+        <span class="recommendation-tag">${item.tag}</span>
+        <h3>${item.title}</h3>
+        <p>${item.description}</p>
+        <span class="recommendation-status">Produto parceiro em seleção</span>
+      </div>`;
+    grid.appendChild(article);
+  });
+}
 
 const screens={
   home:document.getElementById("screen-home"),
@@ -249,7 +364,11 @@ function renderResult(result){
     title: result.title,
     summary: result.summary,
     difficulty: state.answers.dificuldade || "",
-    profile: state.profile || ""
+    profile: state.profile || "",
+    answers: {...state.answers},
+    recommendations: getRecommendations().map(item=>item.key),
+    analysis: result.analysis,
+    steps: result.steps
   }));
   document.getElementById("resultBadge").textContent=result.badge;
   document.getElementById("resultTitle").textContent=result.title;
@@ -261,6 +380,88 @@ function renderResult(result){
     const li=document.createElement("li");li.textContent=step;list.appendChild(li);
   });
 }
+
+
+function prepareLeadCapture(){
+  const difficultyLabels={
+    experiencia:"construir uma apresentação forte mesmo com pouca experiência",
+    curriculo:"fortalecer seu currículo e aumentar suas chances de entrevista",
+    direcao:"organizar seus objetivos e definir por onde começar",
+    qualificacao:"identificar as habilidades mais importantes para desenvolver",
+    entrevista:"ganhar confiança e se preparar melhor para entrevistas",
+    outro:"organizar seus próximos passos profissionais"
+  };
+
+  const focus=difficultyLabels[state.answers.dificuldade] || "organizar seus próximos passos profissionais";
+  document.getElementById("leadPlanSummary").textContent=`Seu plano terá foco em ${focus}.`;
+  document.getElementById("leadProfile").value=state.profile || "não informado";
+  document.getElementById("leadDifficulty").value=state.answers.dificuldade || "não informado";
+}
+
+function isValidEmail(value){
+  return /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(value);
+}
+
+function showLeadError(message){
+  const box=document.getElementById("leadFormError");
+  box.textContent=message;
+  box.classList.remove("hidden");
+}
+
+const leadForm=document.getElementById("leadCaptureForm");
+leadForm.addEventListener("submit",async event=>{
+  event.preventDefault();
+  const name=document.getElementById("leadName").value.trim();
+  const email=document.getElementById("leadEmail").value.trim();
+  const consent=document.getElementById("leadConsent").checked;
+  const errorBox=document.getElementById("leadFormError");
+  const button=document.getElementById("leadSubmitButton");
+  errorBox.classList.add("hidden");
+
+  if(name.length<2){showLeadError("Digite seu primeiro nome para continuar.");return;}
+  if(!isValidEmail(email)){showLeadError("Digite um endereço de e-mail válido.");return;}
+  if(!consent){showLeadError("Marque a autorização para receber o plano e os conteúdos por e-mail.");return;}
+
+  const payload={
+    firstName:name,
+    email,
+    profile:state.profile || "não informado",
+    difficulty:state.answers.dificuldade || "não informado",
+    source:"Diagnóstico Nova Jornada",
+    consent:true,
+    capturedAt:new Date().toISOString()
+  };
+  localStorage.setItem("nj_lead",JSON.stringify(payload));
+
+  if(!CONFIG.leadEndpoint){
+    showLeadError("O envio automático ao Brevo ainda não foi ativado. Seu diagnóstico está salvo neste navegador e você pode ver seu plano agora.");
+    document.getElementById("leadFallback").classList.remove("hidden");
+    if(CONFIG.brevoHostedFormUrl){
+      const hosted=document.getElementById("brevoHostedLink");
+      hosted.href=CONFIG.brevoHostedFormUrl;
+      hosted.classList.remove("hidden");
+    }
+    return;
+  }
+
+  button.disabled=true;button.textContent="Enviando com segurança...";
+  try{
+    const response=await fetch(CONFIG.leadEndpoint,{
+      method:"POST",
+      headers:{"Content-Type":"application/json"},
+      body:JSON.stringify(payload)
+    });
+    if(!response.ok) throw new Error("Falha no envio");
+    leadForm.classList.add("hidden");
+    document.getElementById("leadSuccess").classList.remove("hidden");
+    window.setTimeout(()=>{window.location.href="meu-plano.html";},1200);
+  }catch(error){
+    showLeadError("Não foi possível enviar seu e-mail neste momento. Seu plano continua disponível e você pode tentar novamente depois.");
+    document.getElementById("leadFallback").classList.remove("hidden");
+  }finally{
+    button.disabled=false;button.textContent="📩 Receber meu plano personalizado";
+  }
+});
 
 function resetApp(){
   state.profile=null;state.answers={};state.questionIndex=0;showScreen("home");
@@ -275,9 +476,10 @@ document.addEventListener("click",e=>{
     if(state.questionIndex>0){state.questionIndex--;renderQuestion();}
     else showScreen("profile");
   }
-  if(action==="first-step")showScreen("support");
+  if(action==="first-step"){prepareLeadCapture();showScreen("support");}
   if(action==="back-result")showScreen("result");
   if(action==="continue-after-support")showScreen("next");
+  if(action==="skip-lead")window.location.href="meu-plano.html";
   if(action==="back-support")showScreen("support");
   if(action==="restart")resetApp();
 });

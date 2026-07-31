@@ -1,0 +1,11 @@
+NOVA JORNADA — FASE 3 / ETAPA 1
+
+Implementado:
+- Substituição do espaço genérico de anúncio por recomendações personalizadas.
+- Seleção automática de 3 temas conforme perfil e respostas do diagnóstico.
+- Explicação personalizada da prioridade identificada.
+- Estrutura pronta para receber HotLinks de produtos aprovados futuramente.
+- Recomendações salvas junto ao diagnóstico no localStorage.
+
+Observação:
+Nesta etapa ainda não foram inseridos produtos ou links de afiliado reais. Os cartões exibem “Produto parceiro em seleção” para evitar recomendações sem análise prévia.

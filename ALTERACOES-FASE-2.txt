@@ -1,0 +1,16 @@
+ALTERAÇÕES REALIZADAS — FASE 2
+
+1. Rebranding completo para Nova Jornada.
+2. Instagram integrado no resultado do diagnóstico, tela de próximos passos, oferta e Premium.
+3. WhatsApp integrado com mensagem automática e botão flutuante.
+4. TikTok removido para respeitar a estratégia atual.
+5. SEO básico adicionado às três páginas.
+6. Open Graph adicionado às páginas públicas.
+7. Favicon NJ incluído.
+8. Copy e rodapés padronizados.
+9. Correção de seção duplicada em premium.html.
+10. Links externos abrem em nova aba com proteção noopener/noreferrer.
+
+DADOS CONFIGURADOS
+Instagram: https://www.instagram.com/nova.jornada.oficial/
+WhatsApp: https://wa.me/5581996867010

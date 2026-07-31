@@ -1,0 +1,27 @@
+NOVA JORNADA — VALIDAÇÃO TÉCNICA FINAL
+
+VALIDADO NESTA VERSÃO
+- O formulário chama /.netlify/functions/lead.
+- A chave do Brevo não aparece no HTML nem no JavaScript público.
+- A função valida nome, e-mail e consentimento.
+- A função aceita atualização de contatos já existentes no Brevo.
+- O projeto contém netlify.toml e netlify/functions/lead.js.
+- Os arquivos JavaScript passaram por verificação de sintaxe.
+- O checkout Hotmart permanece configurado em https://pay.hotmart.com/Y106953782D.
+
+ANTES DO TESTE REAL
+1. Atualize o repositório GitHub com todo o conteúdo desta pasta.
+2. Aguarde o deploy automático do Netlify.
+3. No Netlify, crie as variáveis:
+   BREVO_API_KEY = chave secreta criada no Brevo
+   BREVO_LIST_ID = ID numérico da lista Diagnóstico Nova Jornada
+   ALLOWED_ORIGIN = https://gentle-druid-7bd051.netlify.app
+4. Faça um novo deploy depois de salvar as variáveis.
+5. Faça o diagnóstico e cadastre um e-mail real.
+6. Confirme o contato na lista e o disparo da automação.
+7. Depois dos testes, torne o projeto público no Netlify.
+
+IMPORTANTE
+- Nunca publique a BREVO_API_KEY no GitHub.
+- Se trocar o endereço do Netlify ou adicionar domínio próprio, atualize ALLOWED_ORIGIN.
+- É possível autorizar mais de uma origem separando-as por vírgula.

@@ -1,0 +1,20 @@
+NOVA JORNADA — FASE 4 — CANDIDATA AO LANÇAMENTO
+
+INCLUÍDO
+1. Página meu-plano.html personalizada com dados do diagnóstico.
+2. Fluxo atualizado: diagnóstico -> captura Brevo -> meu plano -> oferta -> Hotmart.
+3. Resultado completo salvo no navegador (análise e passos).
+4. Página central-premium.html com ferramentas profissionais.
+5. Ferramentas: objetivo/resumo, candidatura, entrevista, plano de 7 dias, salário líquido, férias e rescisão.
+6. Oferta Premium atualizada com as calculadoras.
+
+ATENÇÃO ANTES DE PUBLICAR
+- Configurar brevoFormEndpoint em script.js.
+- Alterar o botão do e-mail do Brevo para a URL pública de meu-plano.html.
+- Publicar central-premium.html apenas como link dentro do Hotmart Club.
+- GitHub Pages não cria proteção real para central-premium.html; a proteção de compra é feita pelo Hotmart Club.
+- Testar todo o fluxo em celular e computador.
+
+HOTMART
+Checkout: https://pay.hotmart.com/Y106953782D
+Club: https://hotmart.com/PT_BR/club/wildson-da-silva-santana/products/8222982

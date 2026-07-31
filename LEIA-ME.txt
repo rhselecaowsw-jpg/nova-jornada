@@ -1,0 +1,33 @@
+NOVA JORNADA — PROJETO UNIFICADO V2 (FASE 2)
+
+FLUXO INTEGRADO
+1. Abra index.html.
+2. Faça o diagnóstico profissional.
+3. Veja o resultado e clique em “Dar meu 1º passo”.
+4. Passe pela página de apoio e clique em “Conhecer nossos produtos”.
+5. A página oferta.html exibirá uma recomendação baseada no diagnóstico.
+6. Clique em “Quero acessar o Premium”.
+7. O checkout oficial da Hotmart será aberto.
+8. Compradores acessam pela área protegida da Hotmart.
+
+INTEGRAÇÕES DA FASE 2
+- Marca padronizada como Nova Jornada.
+- Instagram oficial: @nova.jornada.oficial.
+- WhatsApp Business: (81) 99686-7010.
+- CTA do Instagram após o diagnóstico, na oferta e na área Premium.
+- Botão de WhatsApp em pontos estratégicos e botão flutuante.
+- TikTok removido do fluxo atual.
+- Estrutura pronta para incluir YouTube, Facebook e LinkedIn futuramente.
+- SEO básico e metadados de compartilhamento.
+- Favicon NJ incorporado sem arquivo externo.
+- Correção de uma seção HTML duplicada na área Premium.
+
+ARQUIVOS PRINCIPAIS
+- index.html: diagnóstico gratuito.
+- oferta.html: apresentação e venda da Plataforma Premium.
+- premium.html: ponte segura para a área protegida da Hotmart.
+- style.css e script.js: diagnóstico.
+- assets/style.css e assets/app.js: oferta e área Premium.
+
+IMPORTANTE PARA A FASE 3
+Esta versão ainda usa localStorage para simular acesso. Antes da venda real, será necessário configurar domínio, hospedagem, páginas legais, autenticação, backend e confirmação segura de pagamento.

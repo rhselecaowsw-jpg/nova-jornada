@@ -1,0 +1,9 @@
+NOVA JORNADA — FASE 5
+
+1. O diagnóstico mostra resultado imediato.
+2. A captura foi preparada para um endpoint seguro, sem chave no navegador.
+3. Há fallback honesto quando a integração ainda não está ativa.
+4. Foram incluídos exemplos prontos para Netlify Functions e Cloudflare Workers.
+5. A Central Premium ganhou calculadora de aviso prévio e checklists profissionais.
+6. A Hotmart continua responsável por pagamento e controle de acesso.
+7. A página central-premium.html deve ser divulgada somente dentro do Hotmart Club.

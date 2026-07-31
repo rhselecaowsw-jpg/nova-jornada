@@ -1,0 +1,44 @@
+NOVA JORNADA — CONFIGURAÇÃO FINAL BREVO + NETLIFY
+
+O código já está configurado para usar automaticamente:
+/.netlify/functions/lead
+
+NÃO coloque a chave do Brevo em script.js, HTML ou GitHub.
+
+1. NO BREVO
+- Abra Configurações > SMTP e API > Chaves de API.
+- Crie uma nova chave exclusiva para a Nova Jornada.
+- Copie a chave apenas uma vez e guarde temporariamente.
+- Descubra o ID numérico da lista "Diagnóstico Nova Jornada".
+
+2. NO NETLIFY
+Abra o projeto > Project configuration > Environment variables.
+Crie:
+
+BREVO_API_KEY = sua chave secreta do Brevo
+BREVO_LIST_ID = número da lista Diagnóstico Nova Jornada
+ALLOWED_ORIGIN = https://SEU-NOME.netlify.app
+
+Para o primeiro teste, ALLOWED_ORIGIN também pode ficar como *.
+Depois do teste, prefira colocar a URL exata do site.
+
+3. ATUALIZAR O GITHUB
+Substitua os arquivos antigos do repositório pelos arquivos desta versão.
+Mantenha index.html na raiz do repositório.
+Inclua obrigatoriamente:
+- netlify.toml
+- pasta netlify/functions/
+
+Após o commit, o Netlify fará o deploy automaticamente.
+
+4. TESTE
+- Faça o diagnóstico no site publicado.
+- Preencha nome e e-mail reais.
+- Verifique se aparece a confirmação.
+- No Brevo, confira se o contato entrou na lista.
+- Confirme se a automação enviou o e-mail.
+
+5. SEGURANÇA
+- Nunca envie a chave do Brevo por mensagem.
+- Nunca publique a chave no GitHub.
+- Se uma chave for exposta, revogue-a imediatamente no Brevo.

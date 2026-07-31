@@ -1,0 +1,8 @@
+NOVA JORNADA — FASE 3, ETAPA 2
+
+- Removido o botão "Simular pagamento aprovado".
+- Removida a liberação por localStorage.
+- Checkout oficial integrado: https://pay.hotmart.com/Y106953782D
+- Botões "Já tenho acesso" direcionam para a área do produto na Hotmart.
+- premium.html deixou de expor as ferramentas e agora funciona apenas como ponte segura para a Hotmart.
+- Nenhum pagamento pode ser simulado nesta versão.

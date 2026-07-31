@@ -1,0 +1,11 @@
+NOVA JORNADA — FASE 6 — INTEGRAÇÃO BREVO FINAL
+
+- Endpoint do formulário definido automaticamente para /.netlify/functions/lead.
+- Função Netlify revisada com validação de nome, e-mail e consentimento.
+- Chave do Brevo permanece protegida em variável de ambiente.
+- Configuração de publicação adicionada em netlify.toml.
+- Envio ao Brevo simplificado para evitar erro por atributos personalizados inexistentes.
+- Cabeçalhos básicos de segurança adicionados.
+- Botão alterado para "Receber meu plano personalizado".
+- Campo "Seu primeiro nome" simplificado para "Nome".
+- Instruções finais adicionadas em CONFIGURAR-BREVO-NETLIFY-FINAL.txt.

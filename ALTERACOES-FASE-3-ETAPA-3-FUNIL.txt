@@ -1,0 +1,20 @@
+NOVA JORNADA — FASE 3, ETAPA 3: FUNIL DE CAPTURA DE LEADS
+
+ALTERAÇÕES EXECUTADAS
+
+1. A antiga tela de recomendações/parceiros foi substituída por uma tela de captura de leads.
+2. Foi criado o formulário "Receba seus próximos passos por e-mail".
+3. O formulário coleta primeiro nome e e-mail.
+4. Foi adicionada autorização explícita para recebimento de conteúdos e ofertas.
+5. Perfil e dificuldade do diagnóstico são enviados como dados ocultos para personalização futura.
+6. Foi adicionada validação dos campos.
+7. Foi criada tela de confirmação após o cadastro.
+8. Após o cadastro, o visitante segue automaticamente para a oferta.
+9. Foi mantida a opção de continuar sem informar o e-mail.
+10. A integração foi preparada para usar a URL de formulário do Brevo sem expor chave de API.
+11. Foi criado o arquivo CONFIGURAR-BREVO.txt com o passo a passo final.
+
+PENDÊNCIA EXTERNA
+
+Para o envio funcionar de verdade, é necessário inserir em script.js a URL do formulário criado dentro da conta Brevo.
+Sem essa URL, o site informa claramente que a integração ainda não foi configurada e não simula um cadastro falso.
