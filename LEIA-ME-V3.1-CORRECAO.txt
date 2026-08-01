@@ -1,0 +1,4 @@
+@123Deus.Sabe V3.1 — Corrente Viva
+Correção: função prayers migrada de prayers.js para prayers.mjs para compatibilidade com Netlify Functions + Netlify Blobs.
+Mantidos: página V3, Caderno de Orações, botão "Orei por...", Brevo (lead.js), WhatsApp, Pix, compartilhamento, tags e arquivos legados de segurança.
+Para atualizar via GitHub Desktop: substitua o conteúdo da pasta local nova-jornada pelo conteúdo deste pacote, mantendo a estrutura de pastas; faça Commit e Push.
