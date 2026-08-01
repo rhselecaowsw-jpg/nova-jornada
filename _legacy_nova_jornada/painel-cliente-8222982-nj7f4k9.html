@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="pt-BR"><head><meta charset="utf-8"/><meta content="width=device-width,initial-scale=1" name="viewport"/><title>Central de Ferramentas Profissionais — Nova Jornada</title><meta content="noindex,nofollow" name="robots"/><link href="assets/style.css" rel="stylesheet"/></head><body>
+<header class="topbar"><div class="wrap nav"><a class="brand" href="index.html">Nova Jornada Premium</a><nav class="navlinks"><a href="https://hotmart.com/PT_BR/club/wildson-da-silva-santana/products/8222982" rel="noopener noreferrer" target="_blank">Voltar ao Hotmart Club</a></nav></div></header>
+<section class="section"><div class="wrap"><span class="badge">Central de Ferramentas Profissionais</span><h1>Ferramentas para transformar intenção em ação.</h1><p class="lead">Escolha uma ferramenta. Seus dados ficam apenas no navegador.</p><div class="notice"><strong>Ferramentas online:</strong> use a Central Premium diretamente no navegador. Seus dados permanecem no seu dispositivo. O acesso pode exibir anúncios ou recomendações de parceiros para manter as ferramentas disponíveis e atualizadas.</div></div></section>
+<main class="section" style="padding-top:0"><div class="wrap"><div class="tool-tabs"><button class="active" data-pane="curriculo">Currículo profissional</button><button class="" data-pane="textos">Textos profissionais</button><button data-pane="candidatura">Candidatura</button><button data-pane="entrevista">Entrevista</button><button data-pane="plano7">Plano de 7 dias</button><button data-pane="salario">Salário líquido</button><button data-pane="ferias">Férias</button><button data-pane="rescisao">Rescisão</button><button data-pane="aviso">Aviso prévio</button><button data-pane="checklists">Checklists</button></div><aside class="ad-zone" data-ad-slot="topo-central"><span class="ad-label">PUBLICIDADE</span><p>Espaço reservado para anúncios e parceiros da Nova Jornada.</p></aside>
+<section class="panel tool-pane active" id="curriculo">
+<div class="cv-builder-wrap">
+<h2>Criador de currículo profissional</h2>
+<p class="lead">Preencha por etapas. Seus dados podem ser salvos neste navegador.</p>
+<div class="progress" id="progress">
+<span class="active">1. Dados</span><span>2. Objetivo</span><span>3. Experiências</span><span>4. Formação</span><span>5. Cursos</span><span>6. Modelo</span>
+</div>
+<div class="step active" data-step="0">
+<div class="form-grid">
+<div class="field"><label>Nome completo</label><div class="help">Use o nome que você utiliza profissionalmente.</div><input id="cvNome" placeholder="Ex.: Maria da Silva"/></div>
+<div class="field"><label>Telefone</label><div class="help">Informe um número que você atende e mantenha o WhatsApp organizado.</div><input id="cvTelefone" placeholder="(81) 99999-9999"/></div>
+<div class="field"><label>E-mail</label><div class="help">Prefira um e-mail com seu nome, sem apelidos.</div><input id="cvEmail" placeholder="maria.silva@email.com"/></div>
+<div class="field"><label>Cidade/UF</label><div class="help">Não é necessário informar endereço completo.</div><input id="cvCidade" placeholder="Recife/PE"/></div>
+<div class="field"><label>LinkedIn (opcional)</label><div class="help">Inclua apenas se o perfil estiver atualizado.</div><input id="cvLinkedin" placeholder="linkedin.com/in/seunome"/></div>
+<div class="field"><label>Foto (opcional)</label><div class="help">Use somente em modelos com foto. Prefira fundo neutro e boa iluminação.</div><input accept="image/*" id="cvFoto" type="file"/></div>
+<div class="field full">
+<div class="photo-box"><div class="photo-preview" id="photoPreview">Sem foto</div><button class="btn btn-danger btn-small" id="removePhoto" type="button">Remover foto</button></div>
+</div>
+</div>
+</div>
+<div class="step" data-step="1">
+<div class="form-grid">
+<div class="field full"><label>Objetivo profissional</label><div class="help">Informe o cargo ou área desejada. Evite “qualquer oportunidade”.</div><div class="example">Exemplo: Busco oportunidade como auxiliar administrativo, contribuindo com organização e atendimento.</div><textarea id="cvObjetivo" maxlength="260"></textarea><div class="char-count"><span data-count="cvObjetivo">0</span>/260</div></div>
+<div class="field full"><label>Resumo profissional</label><div class="help">Escreva de 3 a 5 linhas sobre experiência, qualidades, conhecimentos e objetivo.</div><div class="example">Exemplo: Profissional responsável e organizado, com experiência em atendimento e facilidade para aprender.</div><textarea id="cvResumo" maxlength="600"></textarea><div class="char-count"><span data-count="cvResumo">0</span>/600</div></div>
+<div class="field full"><label>Habilidades</label><div class="help">Separe por vírgulas. Escolha habilidades verdadeiras e relacionadas à vaga.</div><input id="cvHabilidades" placeholder="Organização, atendimento, informática, trabalho em equipe"/></div>
+</div>
+<div class="actions"><button class="btn btn-light" id="suggestObjective" type="button">Gerar sugestão de objetivo</button><button class="btn btn-light" id="suggestSummary" type="button">Gerar sugestão de resumo</button></div>
+</div>
+<div class="step" data-step="2">
+<h3>Experiências profissionais</h3><p class="help">Inclua trabalho formal, informal, autônomo, voluntariado ou ajuda em negócio familiar. Quem busca o primeiro emprego pode usar projetos e atividades relevantes.</p>
+<div class="dynamic-list" id="experiences"></div>
+<div class="actions"><button class="btn btn-light" id="addExperience" type="button">+ Adicionar experiência</button></div>
+</div>
+<div class="step" data-step="3">
+<h3>Formação acadêmica</h3><p class="help">Adicione escolaridade, curso técnico, graduação ou formação em andamento.</p>
+<div class="dynamic-list" id="education"></div>
+<div class="actions"><button class="btn btn-light" id="addEducation" type="button">+ Adicionar formação</button></div>
+</div>
+<div class="step" data-step="4">
+<h3>Cursos e certificações</h3><p class="help">Priorize cursos relacionados à área desejada.</p>
+<div class="dynamic-list" id="courses"></div>
+<div class="actions"><button class="btn btn-light" id="addCourse" type="button">+ Adicionar curso</button></div>
+<div class="form-grid" style="margin-top:18px">
+<div class="field full"><label>Idiomas (opcional)</label><div class="help">Informe o idioma e o nível real.</div><input id="cvIdiomas" placeholder="Inglês básico; Espanhol intermediário"/></div>
+<div class="field full"><label>Informações adicionais</label><div class="help">Ex.: disponibilidade, CNH, veículo próprio ou conhecimento específico.</div><textarea id="cvAdicionais"></textarea></div>
+</div>
+</div>
+<div class="step" data-step="5">
+<h3>Escolha o modelo</h3>
+<div class="template-picker">
+<div class="template-option selected" data-template="moderno">Moderno</div>
+<div class="template-option" data-template="classico">Clássico</div>
+<div class="template-option" data-template="minimalista">Minimalista</div>
+<div class="template-option" data-template="ats">ATS</div>
+<div class="template-option" data-template="executivo">Executivo</div>
+<div class="template-option" data-template="operacional">Operacional</div>
+</div>
+<div class="notice" style="margin-top:14px"><strong>Dica:</strong> para candidaturas em grandes empresas e sistemas automáticos, escolha o modelo ATS e evite foto.</div>
+<div class="actions"><button class="btn btn-primary" id="generateCv" type="button">Gerar currículo</button><button class="btn btn-outline" id="printCv" type="button">Baixar/Imprimir PDF</button><button class="btn btn-light" id="saveCv" type="button">Salvar dados</button></div>
+</div>
+<div class="actions">
+<button class="btn btn-outline" id="prevStep" type="button">← Voltar</button>
+<button class="btn btn-primary" id="nextStep" type="button">Continuar →</button>
+</div>
+</div>
+<div class="cv-preview moderno" id="cvPreview">
+<h1>SEU NOME</h1><div class="cv-meta">Telefone | E-mail | Cidade/UF</div><h2>Objetivo profissional</h2><p>Preencha as etapas e clique em gerar currículo.</p>
+</div>
+</section><aside class="ad-zone" data-ad-slot="apos-curriculo"><span class="ad-label">PUBLICIDADE</span><p>Espaço reservado para anúncios e parceiros da Nova Jornada.</p></aside><section class="panel tool-pane" id="textos"><h2>Objetivo e resumo profissional</h2><div class="calculator-grid"><div class="field"><label>Cargo ou área desejada</label><input id="txCargo" placeholder="Ex.: Auxiliar administrativo"/></div><div class="field"><label>Momento profissional</label><select id="txNivel"><option>Primeiro emprego</option><option>Com experiência</option><option>Mudança de carreira</option></select></div><div class="field"><label>Qualidades</label><input id="txQualidades" placeholder="organização, responsabilidade"/></div><div class="field"><label>Conhecimentos</label><input id="txConhecimentos" placeholder="atendimento, informática"/></div></div><button class="btn btn-primary" id="genTextos">Gerar textos</button><h3>Objetivo</h3><div class="result" id="resObjetivo"></div><h3>Resumo</h3><div class="result" id="resResumo"></div></section>
+<section class="panel tool-pane" id="candidatura"><h2>Carta e mensagem de candidatura</h2><div class="calculator-grid"><div class="field"><label>Nome</label><input id="caNome"/></div><div class="field"><label>Empresa</label><input id="caEmpresa"/></div><div class="field"><label>Vaga</label><input id="caVaga"/></div><div class="field"><label>Pontos fortes</label><input id="caQualidades"/></div></div><button class="btn btn-primary" id="genCandidatura">Gerar</button><h3>Carta</h3><div class="result" id="resCarta"></div><h3>WhatsApp</h3><div class="result" id="resWhatsapp"></div></section>
+<section class="panel tool-pane" id="entrevista"><h2>Simulador de entrevista</h2><div class="field"><label>Vaga desejada</label><input id="intVaga"/></div><button class="btn btn-primary" id="startInterview">Começar treino</button><div id="questions"></div><div class="success hidden" id="scoreBox"><strong id="score"></strong><p id="feedback"></p></div></section>
+<section class="panel tool-pane" id="plano7"><h2>Plano profissional de 7 dias</h2><div class="calculator-grid"><div class="field"><label>Cargo ou área</label><input id="plCargo"/></div><div class="field"><label>Tempo diário disponível</label><select id="plHoras"><option>20 minutos por dia</option><option>40 minutos por dia</option><option>1 hora por dia</option></select></div><div class="field"><label>Maior dificuldade</label><select id="plDificuldade"><option>Não sei por onde começar</option><option>Não encontro vagas</option><option>Tenho medo de entrevista</option><option>Envio currículos e não recebo resposta</option></select></div></div><button class="btn btn-primary" id="genPlano">Criar plano</button><div class="result" id="resPlano"></div></section>
+<section class="panel tool-pane" id="salario"><h2>Calculadora de salário líquido — estimativa 2026</h2><div class="calculator-grid"><div class="field"><label>Salário bruto</label><input id="salBruto" inputmode="decimal" placeholder="3000"/></div><div class="field"><label>Número de dependentes</label><input id="salDependentes" min="0" type="number" value="0"/></div><div class="field"><label>Outros descontos</label><input id="salOutros" inputmode="decimal" value="0"/></div></div><button class="btn btn-primary" id="calcSalario">Calcular</button><div id="salResult"></div><p class="legal-note">Estimativa informativa. Não substitui folha de pagamento. Considera tabela progressiva do INSS e tabela mensal do IRRF de 2026; benefícios, pensão, sindicato e regras específicas podem alterar o resultado.</p></section>
+<section class="panel tool-pane" id="ferias"><h2>Calculadora de férias</h2><div class="calculator-grid"><div class="field"><label>Salário mensal</label><input id="ferSalario" inputmode="decimal"/></div><div class="field"><label>Dias de férias</label><input id="ferDias" max="30" min="1" type="number" value="30"/></div><div class="field"><label>Vender 10 dias?</label><select id="ferAbono"><option value="nao">Não</option><option value="sim">Sim</option></select></div></div><button class="btn btn-primary" id="calcFerias">Calcular</button><div id="ferResult"></div><p class="legal-note">Estimativa bruta, sem descontos tributários e sem considerar médias de adicionais.</p></section>
+<section class="panel tool-pane" id="rescisao"><h2>Calculadora de rescisão — estimativa orientativa</h2><div class="calculator-grid"><div class="field"><label>Salário mensal</label><input id="resSalario" inputmode="decimal"/></div><div class="field"><label>Dias trabalhados no último mês</label><input id="resDias" max="30" min="0" type="number" value="30"/></div><div class="field"><label>Meses para 13º proporcional</label><input id="res13" max="12" min="0" type="number" value="0"/></div><div class="field"><label>Meses para férias proporcionais</label><input id="resFerias" max="12" min="0" type="number" value="0"/></div><div class="field"><label>Férias vencidas</label><select id="resVencidas"><option value="0">Não</option><option value="1">Sim, 1 período</option></select></div><div class="field"><label>Aviso prévio indenizado (dias)</label><input id="resAviso" max="90" min="0" type="number" value="0"/></div><div class="field"><label>Saldo informado do FGTS</label><input id="resFgts" inputmode="decimal" value="0"/></div><div class="field"><label>Multa de 40% do FGTS?</label><select id="resMulta"><option value="nao">Não</option><option value="sim">Sim</option></select></div></div><button class="btn btn-primary" id="calcRescisao">Calcular estimativa bruta</button><div id="resResult"></div><p class="legal-note">Não determina direitos nem valor oficial. O tipo de desligamento, convenção coletiva, médias, faltas, descontos e projeção do aviso podem alterar o cálculo. Confirme com RH, contador, sindicato ou profissional jurídico.</p></section>
+<section class="panel tool-pane" id="aviso"><h2>Calculadora de aviso prévio — estimativa</h2><div class="calculator-grid"><div class="field"><label>Salário mensal</label><input id="avSalario" inputmode="decimal" placeholder="3000"/></div><div class="field"><label>Anos completos trabalhados</label><input id="avAnos" max="30" min="0" type="number" value="0"/></div><div class="field"><label>Tipo</label><select id="avTipo"><option value="indenizado">Indenizado</option><option value="trabalhado">Trabalhado</option></select></div></div><button class="btn btn-primary" id="calcAviso">Calcular</button><div id="avResult"></div><p class="legal-note">Estimativa informativa baseada em 30 dias mais 3 dias por ano completo, limitada a 90 dias. Situações específicas podem alterar o direito e o valor.</p></section>
+<section class="panel tool-pane" id="checklists"><h2>Checklists profissionais</h2><div class="checklist-grid"><article class="checklist-card"><h3>Antes da entrevista</h3><label><input type="checkbox"/> Pesquisar a empresa e a vaga</label><label><input type="checkbox"/> Separar currículo e documentos</label><label><input type="checkbox"/> Preparar apresentação de 1 minuto</label><label><input type="checkbox"/> Treinar exemplos de resultados</label><label><input type="checkbox"/> Confirmar endereço, horário ou link</label><label><input type="checkbox"/> Planejar roupa e deslocamento</label></article><article class="checklist-card"><h3>Documentos para admissão</h3><label><input type="checkbox"/> Documento de identificação e CPF</label><label><input type="checkbox"/> Carteira de Trabalho Digital</label><label><input type="checkbox"/> Comprovante de residência</label><label><input type="checkbox"/> Dados bancários</label><label><input type="checkbox"/> Certificados ou diplomas solicitados</label><label><input type="checkbox"/> Documentos de dependentes, quando exigidos</label></article></div><p class="legal-note">A empresa pode solicitar documentos adicionais. Confirme a lista diretamente com o RH.</p></section>
+<aside class="ad-zone" data-ad-slot="rodape-central"><span class="ad-label">PUBLICIDADE</span><p>Espaço reservado para anúncios e parceiros da Nova Jornada.</p></aside></div></main><footer>Nova Jornada Premium — Ferramentas de apoio profissional.</footer><script src="assets/cv-tools.js"></script><script src="assets/premium-tools.js"></script><script src="assets/ads.js"></script></body></html>

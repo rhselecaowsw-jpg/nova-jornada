@@ -1,0 +1,12 @@
+@123Deus.Sabe — V1
+
+1. Página pública transformada para corrente de oração e acolhimento.
+2. Hotmart não é usado no fluxo público desta V1.
+3. Brevo foi preservado via /.netlify/functions/lead.
+4. Para Brevo funcionar no Netlify, mantenha BREVO_API_KEY, BREVO_LIST_ID e ALLOWED_ORIGIN configurados.
+5. O formulário NÃO envia o texto do desabafo ao Brevo; somente o e-mail consentido entra na lista. Isso evita armazenar conteúdo pessoal/sensível no sistema de marketing.
+6. Espaço do vídeo principal está preparado no index.html. Quando o vídeo estiver pronto, substitua o bloco .video-placeholder por <video controls playsinline ...>.
+7. Pix/WhatsApp configurado: 81996867010.
+8. Instagram ainda não foi inserido porque o perfil oficial não foi confirmado.
+9. IMPORTANTE: configurar no Brevo a automação de boas-vindas/acolhimento para a lista usada por BREVO_LIST_ID.
+10. Analytics antigo não foi encontrado explicitamente nos arquivos desta base; o script possui eventos gtag prontos e passará a registrar eventos se o Google tag/gtag for inserido no HTML.

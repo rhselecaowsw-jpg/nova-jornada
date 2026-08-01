@@ -63,10 +63,10 @@ exports.handler = async (event) => {
   const email = String(body.email || "").trim().toLowerCase().slice(0, 160);
   const consent = body.consent === true;
 
-  if (firstName.length < 2 || !EMAIL_RE.test(email) || !consent) {
+  if (!EMAIL_RE.test(email) || !consent) {
     return jsonResponse(
       400,
-      { error: "Preencha nome, e-mail válido e aceite o consentimento." },
+      { error: "Preencha um e-mail válido e aceite o consentimento." },
       corsOrigin
     );
   }
@@ -81,7 +81,7 @@ exports.handler = async (event) => {
       },
       body: JSON.stringify({
         email,
-        attributes: { FIRSTNAME: firstName },
+        attributes: { FIRSTNAME: firstName || "Amigo(a)" },
         listIds: [listId],
         updateEnabled: true
       })

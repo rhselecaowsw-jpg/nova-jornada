@@ -12,18 +12,3 @@
     X-Frame-Options = "SAMEORIGIN"
     Referrer-Policy = "strict-origin-when-cross-origin"
     Permissions-Policy = "camera=(), microphone=(), geolocation=()"
-
-# Impede o uso do endereço antigo da Central Premium.
-[[redirects]]
-  from = "/central-premium.html"
-  to = "/premium.html"
-  status = 302
-  force = true
-
-# Reduz indexação, cache e exposição de origem da página entregue pelo Hotmart Club.
-[[headers]]
-  for = "/painel-cliente-8222982-nj7f4k9.html"
-  [headers.values]
-    X-Robots-Tag = "noindex, nofollow, noarchive, nosnippet"
-    Cache-Control = "no-store, private"
-    Referrer-Policy = "no-referrer"
