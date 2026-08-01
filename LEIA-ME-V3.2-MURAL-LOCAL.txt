@@ -1,0 +1,9 @@
+V3.2 — MURAL LOCAL DE ORAÇÃO
+
+- Removido o Netlify Blobs e a função prayers, que estavam causando erro.
+- O e-mail continua sendo enviado ao Brevo pela função lead.js.
+- Após o cadastro, somente o primeiro nome aparece imediatamente no topo do mural.
+- Os nomes anteriores descem, em estilo chat/carrossel vertical.
+- A lista fica salva apenas no navegador atual (localStorage), sem banco de dados central.
+- Ao abrir em outro aparelho/navegador, a lista começa vazia.
+- WhatsApp, Pix, desabafo, captura de e-mail e demais elementos da V3 foram preservados.
