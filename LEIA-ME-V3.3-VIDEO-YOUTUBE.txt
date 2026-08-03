@@ -1,0 +1,9 @@
+@123Deus.Sabe V3.3
+
+Alteracoes desta versao:
+- Video principal do YouTube incorporado: https://youtu.be/1UQiyqqzqiU
+- Tentativa de autoplay ao abrir a pagina. Navegadores podem bloquear autoplay com som; nesse caso o visitante toca no video.
+- Mural de nomes reposicionado ao lado do video no desktop e abaixo no celular.
+- Botao flutuante "Ajude esta corrente a crescer" levando para a area de apoio via Pix.
+- Integracao Brevo, formulario, compartilhamento WhatsApp e Pix preservados.
+- O mural continua local neste navegador, como na V3.2.
